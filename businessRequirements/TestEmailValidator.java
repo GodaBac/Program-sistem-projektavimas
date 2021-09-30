@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class TestEmailValidator {
 
-    EmailValidator emailValidator = new EmailValidator;
+    EmailValidator emailValidator = new EmailValidator();
 
     @Test
     void testEmailNotNull() {
@@ -31,7 +31,7 @@ public class TestEmailValidator {
         //should return true, because email doesn't have any invalid symbols
         assertTrue(emailValidator.checkIfEmailDoesntContainInvalidSymbols("abcdefg@abc.lt"));
         //should return false, because email has invalid symbols
-        assertFalse(emailValidator.checkIfEmailDoesntContainInvalidSymbols("abc^efg@abc.lt"));
+        assertFalse(emailValidator.checkIfEmailDoesntContainInvalidSymbols("abc<..efg@abc.lt"));
     }
 
     @Test
